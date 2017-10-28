@@ -1,0 +1,10 @@
+set title "Compression Performance: LZW vs Huffman" font ", 24"
+set ylabel "time (s)" font ", 14"
+set xlabel "file size (KB)" font ", 14"
+set key left top Left title 'Legend' box 3
+plot("data.txt") using 1:2 with linespoints title "LZW Compression" ls 2 lw 4,\
+("data.txt") using 1:5 with linespoints title "LZW Decompression" ls 3 lw 4,\
+("data.txt") using 1:3 with linespoints title "Huffman Compression" ls 1 lw 4,\
+("data.txt") using 1:4 with linespoints title "Huffman Decompression" ls 4 lw 4
+
+
